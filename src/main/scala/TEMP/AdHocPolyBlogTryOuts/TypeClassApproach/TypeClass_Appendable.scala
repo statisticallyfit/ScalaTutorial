@@ -30,7 +30,7 @@ object AppendFactory{
      def appendItems_WithImplicitParam[A](a: A, b: A)(implicit ev: Appendable[A]) = ev.append(a, b)
 
      //note: this means method is parametrized with A and requires there must be an implicit
-     // value Appendable[A] within scope. No longer have 'ev' so we need 'implicitly' keyword. 
+     // value Appendable[A] within scope. No longer have 'ev' so we need 'implicitly' keyword.
      def appendItems_WithContextBound[A: Appendable](a: A, b: A) =
           implicitly[Appendable[A]].append(a, b)
 }
