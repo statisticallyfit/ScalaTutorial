@@ -1,4 +1,4 @@
-package TEMP.AdHocPolyBlogTryOuts
+package TEMP.AdHocPolyBlogTryOuts.TypeClassApproach
 
 //note  Source: http://gibbons.org.uk/scala-type-class (second part - TAKE 2 section)
 
