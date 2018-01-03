@@ -13,7 +13,7 @@ object TypeClass_Appendable {
      trait Appendable[A] {
           def append(a: A, b: A): A
      }
-
+     //note: the implicits need to be in scope of the methods where the implicits are used (appendItems() )
      object Appendable { // companion object
           implicit val appendableInt = new Appendable[Int] {
                override def append(a: Int, b: Int) = a + b
@@ -23,6 +23,7 @@ object TypeClass_Appendable {
                override def append(a: String, b: String) = a.concat(b)
           }
      }
+
 
      object AppendFactory{
           // note: Instead of taking an implicit conversion ev parameter, we give appendItems()
