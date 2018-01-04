@@ -11,7 +11,7 @@ object TypeClass_GeneralWeapons {
      class WoodenBreadBoard extends KitchenUtensil
      // .. etc
 
-     case class Creature(val name: String, var health: Int) {
+     case class Creature(name: String, var health: Int) {
           def inflictDamage(severity: Int) = health -= severity
      }
 

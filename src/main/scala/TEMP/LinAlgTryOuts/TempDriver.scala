@@ -1,3 +1,4 @@
+package TEMP.LinAlgTryOuts
 //import number._
 //
 //import scala.collection.mutable.ListBuffer
@@ -30,3 +31,10 @@
 //          ))
 //     }
 //}
+
+import spire.implicits._
+import spire.math._
+
+object TempDriver extends App {
+
+}

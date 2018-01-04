@@ -1,3 +1,71 @@
+package TEMP.LinAlgTryOuts
+
+
+import util._
+import theory._
+
+import scala.math
+import spire.math.{Rational => SMRational}
+
+/*val ZERO: T
+     val ONE: T
+
+     def +(that: T)
+     def -(that: T)
+     def *(that: T)
+     def /(that: T)
+     def ^(): T
+     def sqrt(): T
+
+     def inverse(): T
+     def opposite(): T
+
+     def abs(): T
+
+     def compare(that: T): Int
+     def equals(that: T): Boolean*/
+
+
+sealed trait Number[T] extends Ring[T] with Field[T] with Ordered[T]
+
+abstract class Complex[T](val real: T, val imag: T) extends Number[Complex[T]]{
+     def getReal = real
+}
+//methods inherited: +, -, opposite, / , inverse, ZERO, ONE
+case class Real(override val real: Double) extends Complex[Real](Real(real), Real(0))
+case class Rational(num: Int, denom: Int) extends Real(num * 1.0 / denom)
+case class Natural(nat: Int) extends Rational(nat, 1) //{ require}
+
+/*object Complex {
+     implicit def apply(n: Int): Complex[Int] = new Complex(n)
+}*/
+
+object Number {
+
+     implicit val complexNumber = new Number[Complex[Int]] {
+          override val ZERO: Complex[Int] = new Complex(0,0)
+          override val ONE: Complex[Int] = new Complex(1, 0)
+
+          def +(that: Complex[Int]) = this
+          def -(that: T)
+          def *(that: T)
+          def /(that: T)
+          def ^(): T
+          def sqrt(): T
+
+          def inverse(): T
+          def opposite(): T
+
+          def abs(): T
+
+          def compare(that: T): Int
+          def equals(that: T): Boolean
+
+     }
+}
+
+
+
 //package number
 //
 //import util._

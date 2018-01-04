@@ -27,6 +27,7 @@ libraryDependencies ++= Seq(/*
      //"org.specs2"      %% "specs2-core"    % "3.7" % Test
      "org.specs2" % "specs2-core_2.11" % "3.8.4-20160711064123-77be371" % Test,
      "org.scala-lang" % "scala-reflect" % "2.11.8",
-     "org.apache.commons" % "commons-lang3" % "3.5"
+     "org.apache.commons" % "commons-lang3" % "3.5",
+     "org.typelevel" %% "spire" % "0.14.1"
      /*"org.scala-lang" % "scala-reflect" % "2.10.0" % Test*/
 )
