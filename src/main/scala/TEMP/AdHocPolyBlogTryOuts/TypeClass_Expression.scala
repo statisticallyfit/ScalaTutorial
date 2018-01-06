@@ -33,7 +33,7 @@ object TypeClass_Expression {
           // context bound T: Value says that for any type T there is an
           // implicit conversion to a Value[_] type hierarchy using implicits.
           def calculate[T: Value](t: T): Int =
-          calculate(implicitly[Value[T]].value(t))
+               calculate(implicitly[Value[T]].value(t))
      }
 
 
