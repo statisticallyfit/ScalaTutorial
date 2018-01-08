@@ -6,8 +6,11 @@ import scala.language.existentials
 
 
 /**
-  *
+  * NOTE: Source: https://tpolecat.github.io/2015/04/29/f-bounds.html
   */
+
+
+
 object TypeClass_Pet_OnlyAdHoc {
 
      //using the typical typeclass two-arg methods.
