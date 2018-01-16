@@ -34,9 +34,9 @@ libraryDependencies ++= Seq(
      //Scala Reflections
      "org.scala-lang" % "scala-reflect" % "2.11.11",
      //ScalaCheck
-     /*"org.specs2" % "specs2-core_2.11" % "4.0.1" % "test",
+     "org.specs2" %% "specs2-core" % "4.0.2" % Test,
      //Discipline
-     "org.typelevel" %% "discipline" % "0.8",*/
+     "org.typelevel" %% "discipline" % "0.8",
      //Spire
      "org.typelevel" %% "spire" % "0.14.1",
      //Scalaz

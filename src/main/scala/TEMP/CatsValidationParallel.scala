@@ -6,6 +6,7 @@ import cats.Applicative
 import cats.Apply
 import cats.Monad
 import cats.data.NonEmptyList
+import cats.data.EitherK
 import cats.data.Validated
 import cats.data.ValidatedNel
 import cats.data.Validated.{Invalid, Valid}
@@ -193,6 +194,53 @@ object CatsValidationParallel {
                     case (name, age, houseNumber, street) =>
                          Person(name, age, Address(houseNumber, street))
                }
+
+
+          // -------------------------------------
+
+          val v = validatedMonad.tuple2(Validated.invalidNel[String, Int]("oops"),
+               Validated.invalidNel[String, Double]("uh oh"))
+
+          println(v) // note - this one short-circuits
+
+
+          // ------------------------------------
+          // sequential validation (no short-circuiting)
+          val houseConfig = Config(Map("house_number" → "-42"))
+
+          val houseNumber = houseConfig.parse[Int]("house_number").andThen { n ⇒
+               if (n >= 0) Validated.valid(n)
+               else Validated.invalid(ParseError("house_number"))
+          }
+
+          println(houseNumber)
+
+          assert(!houseNumber.isValid)
+          assert(houseNumber == Validated.invalid(ParseError("house_number")))
+
+
+          // ------------------------------------
+          //note - withEither method allows you to turn a Validated instance into
+          // an Either instance (temporarily) and apply it to function so that we
+          // can get Either's short-circuiting behavior when using Validated type.
+
+          def positive(field: String, i: Int): Either[ConfigError, Int] ={
+               if(i >= 0) Either.right(i)
+               else Either.left(ParseError(field))
+          }
+
+          val houseConfig2 = Config(Map("house_number" -> "-42"))
+
+          val houseNumber2 = houseConfig2.parse[Int]("house_number").withEither {
+               either: Either[ConfigError, Int] =>
+                    either.flatMap {
+                         i => positive("house_number", i)
+                    }
+          }
+
+          println(houseNumber2)
+
+
 
      }
 
