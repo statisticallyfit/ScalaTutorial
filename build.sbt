@@ -55,6 +55,8 @@ libraryDependencies ++= Seq(
      "org.spire-math" %% "kind-projector" % "0.9.4",
      //Apache Commons (Java)
      "org.apache.commons" % "commons-lang3" % "3.6"
+     //Shapeless
+     //"org.typelevel" %% "shapeless-scalaz" % "0.4"
      //old stuff
      /*"org.specs2" % "specs2-core_2.11" % "3.8.4-20160711064123-77be371" % Test,
      "org.scala-lang" % "scala-reflect" % "2.11.8",,

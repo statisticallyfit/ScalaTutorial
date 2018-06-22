@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="scalatutorial-build"
+		revision="0.1-SNAPSHOT"
+		extra-scalaVersion="2.10"
+		extra-sbtVersion="0.13"
+		conf="test"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20180622104101"/>
+	<dependencies>
+		<module organisation="org.lyranthe.sbt" name="partial-unification">
+			<revision name="1.1.0" status="release" pubdate="20170811133804" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="0">
+				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+				<metadata-artifact status="no" details="" size="1528" time="0" location="/datascience/projects/statisticallyfit/github/Scala/Learning/ScalaTutorial/project/.ivy/cache/scala_2.10/sbt_0.13/org.lyranthe.sbt/partial-unification/ivy-1.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.lyranthe.sbt/partial-unification/scala_2.10/sbt_0.13/1.1.0/ivys/ivy.xml"/>
+				<caller organisation="default" name="scalatutorial-build" conf="test, compile, runtime" rev="1.1.0" rev-constraint-default="1.1.0" rev-constraint-dynamic="1.1.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="partial-unification" type="jar" ext="jar" status="no" details="" size="9698" time="0" location="/datascience/projects/statisticallyfit/github/Scala/Learning/ScalaTutorial/project/.ivy/cache/scala_2.10/sbt_0.13/org.lyranthe.sbt/partial-unification/jars/partial-unification-1.1.0.jar">
+						<origin-location is-local="false" location="https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.lyranthe.sbt/partial-unification/scala_2.10/sbt_0.13/1.1.0/jars/partial-unification.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
