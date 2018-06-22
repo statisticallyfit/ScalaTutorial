@@ -24,6 +24,9 @@ object Amount {
                (a.head * b) :: HNil
      }
 
+     //Implicit resolution used to get correct Generic instance of our case class.
+     //note: type Repr = BigDecimal :: HNil in this case but it can be anything.
+     // note: Generic.Aux[T, Repr0] is just sugar for setting type Aux[T, Repr0] = Generic[T] { type Repr = Repr0}
      implicit def genericAmount[A, R](implicit gen: Generic.Aux[A, R],amount: Amount[R]): Amount[A] = new Amount[A] {
 
           override def zero: A = gen.from(amount.zero)
@@ -31,8 +34,11 @@ object Amount {
           override def times(a: A, b: BigDecimal): A = gen.from(amount.times(gen.to(a), b))
      }
 
-     implicit def amountForHList[H, T <: HList](implicit amount: Lazy[Amount[H]], defaultTail: DefaultInstance[T]):
-     Amount[H :: T] = new Amount[H :: T] {
+     //The way to generate an Amount type class instance for HLists so that the resulting typeclass
+     // can be plugged into genericAmount[A, R] where R is the HList.
+     implicit def amountForHList[H, T <: HList](
+          implicit amount: Lazy[Amount[H]], defaultTail: DefaultInstance[T]
+     ): Amount[H :: T] = new Amount[H :: T] {
 
           override def zero: H :: T = amount.value.zero :: defaultTail.instance
           override def plus(a: H :: T, b: H :: T): H :: T = amount.value.plus(a.head, b.head) :: defaultTail.instance
@@ -61,8 +67,8 @@ object DefaultInstance {
      }
 
      implicit def defaultInstanceForHList[H, T <: HList](
-                                                             implicit defaultHead: DefaultInstance[H], defaultTail: DefaultInstance[T]
-                                                        ): DefaultInstance[H :: T] = new DefaultInstance[H :: T] {
+          implicit defaultHead: DefaultInstance[H], defaultTail: DefaultInstance[T]
+     ): DefaultInstance[H :: T] = new DefaultInstance[H :: T] {
           override def instance: H :: T = defaultHead.instance :: defaultTail.instance
      }
 
@@ -115,7 +121,10 @@ object ShapelessDSL extends App {
      case class EUR(value: BigDecimal)
      case class USD(value: BigDecimal)
 
+     //is this a highlighting error????
      val twentyPounds         = GBP(15) + GBP(5)
+     println(twentyPounds)
+
      val twentyPoundsPerMonth = twentyPounds per Month
      val fortyPoundsPerMonth  = twentyPoundsPerMonth + twentyPoundsPerMonth
      val pricePerSquareMeter  = EUR(1000) per SquareMeter

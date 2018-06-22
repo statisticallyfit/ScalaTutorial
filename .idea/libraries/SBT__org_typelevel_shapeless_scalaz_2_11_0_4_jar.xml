@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: org.typelevel:shapeless-scalaz_2.11:0.4:jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/project/.ivy/cache/org.typelevel/shapeless-scalaz_2.11/jars/shapeless-scalaz_2.11-0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/project/.ivy/cache/org.typelevel/shapeless-scalaz_2.11/srcs/shapeless-scalaz_2.11-0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -2,7 +2,7 @@ name := "ScalaTutorial"
 
 version := "1.0"
 
-scalaVersion := "2.11.11" //"2.12.0-RC1"
+scalaVersion := "2.11.12" //"2.12.0-RC1" // 2.11.11
 
 traceLevel := -1
 
@@ -50,13 +50,13 @@ libraryDependencies ++= Seq(
      "org.typelevel"   %% "cats-free"           % "1.0.1",
      "org.typelevel"   %% "cats-testkit"           % "1.0.1",
      //Shapeless
-     "com.chuusai"     %% "shapeless"      % "2.3.3",
+     //"com.chuusai"     %% "shapeless"      % "2.3.3",
      //Kind projector plugin
      "org.spire-math" %% "kind-projector" % "0.9.4",
      //Apache Commons (Java)
-     "org.apache.commons" % "commons-lang3" % "3.6"
+     "org.apache.commons" % "commons-lang3" % "3.6",
      //Shapeless
-     //"org.typelevel" %% "shapeless-scalaz" % "0.4"
+     "org.typelevel" %% "shapeless-scalaz" % "0.4"
      //old stuff
      /*"org.specs2" % "specs2-core_2.11" % "3.8.4-20160711064123-77be371" % Test,
      "org.scala-lang" % "scala-reflect" % "2.11.8",,
