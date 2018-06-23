@@ -37,8 +37,8 @@ object Amount {
      //The way to generate an Amount type class instance for HLists so that the resulting typeclass
      // can be plugged into genericAmount[A, R] where R is the HList.
      implicit def amountForHList[H, T <: HList](
-          implicit amount: Lazy[Amount[H]], defaultTail: DefaultInstance[T]
-     ): Amount[H :: T] = new Amount[H :: T] {
+                                                    implicit amount: Lazy[Amount[H]], defaultTail: DefaultInstance[T]
+                                               ): Amount[H :: T] = new Amount[H :: T] {
 
           override def zero: H :: T = amount.value.zero :: defaultTail.instance
           override def plus(a: H :: T, b: H :: T): H :: T = amount.value.plus(a.head, b.head) :: defaultTail.instance
@@ -48,6 +48,7 @@ object Amount {
 
      implicit class AmountOps[A](a: A)(implicit amount: Amount[A]) {
           def +(b: A): A = amount.plus(a, b)
+          def plus(b: A): A = amount.plus(a, b)
           def -(b: A): A = amount.plus(a, amount.times(b, -1))
           def *[B](b: BigDecimal): A = amount.times(a, b)
           def /[B](b: BigDecimal): A = amount.times(a, BigDecimal(1) / b)
@@ -124,6 +125,7 @@ object ShapelessDSL extends App {
      //is this a highlighting error????
      val twentyPounds         = GBP(15) + GBP(5)
      println(twentyPounds)
+     println("Thirty: " + GBP(15).plus(GBP(15)))
 
      val twentyPoundsPerMonth = twentyPounds per Month
      val fortyPoundsPerMonth  = twentyPoundsPerMonth + twentyPoundsPerMonth
