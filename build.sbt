@@ -18,7 +18,7 @@ ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 showSuccess := false
 
 // append -deprecation to the options passed to the Scala compiler
-scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-language:postfixOps", "-Ypartial-unification")
+scalacOptions ++= Seq("-Xlog-implicits","-deprecation", "-unchecked", "-feature", "-language:postfixOps", "-Ypartial-unification")
 
 // disable updating dynamic revisions (including -SNAPSHOT versions)
 offline := true
