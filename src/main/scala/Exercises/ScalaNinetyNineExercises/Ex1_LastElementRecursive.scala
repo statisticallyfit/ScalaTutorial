@@ -1,4 +1,4 @@
-package ExercisesOnline.ScalaNinetyNineExercises
+package Exercises.ScalaNinetyNineExercises
 
 /**
   *

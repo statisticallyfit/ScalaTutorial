@@ -1,4 +1,4 @@
-package ExercisesOnline
+package Exercises
 
 import scala.collection.mutable.ArrayBuffer
 import scala.io.StdIn

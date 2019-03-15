@@ -1,4 +1,4 @@
-package ExercisesOnline
+package Exercises
 
 import scala.collection._
 import scala.io.StdIn

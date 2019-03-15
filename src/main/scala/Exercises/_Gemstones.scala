@@ -1,4 +1,4 @@
-package ExercisesOnline
+package Exercises
 
 /**
   *

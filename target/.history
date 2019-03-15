@@ -3,3 +3,5 @@ clean
 compile
 update
 compile
+clean
+update

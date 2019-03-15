@@ -1,8 +1,22 @@
-project/.boot/
-project/.sbtboot/
-project/.ivy/
-project/target
-project/project/
-target
-.idea
+target/*
+ivyrepo/*
+sbtboot/*
+project/target/*
+project/.ivy/*
+project/.boot/*
+project/project/target/*
 
+# Maven
+target
+
+# IntelliJ
+.idea
+.idea_modules
+
+# Eclipse
+.cache
+.classpath
+*.swp
+.project
+.settings
+.target
