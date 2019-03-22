@@ -11,8 +11,8 @@ object Ex6_IsPalindrome {
      def isPalindrome[A](list: List[A]): Boolean = {
           list match {
                case Nil => true //means either empty list or even length
-               case List(elem) => true
-               case ls@_ => (ls.head === ls.last) && isPalindrome(ls.init.tail)
+               case List(_) => true // list of a single element is a palindrome
+               case h :: tail => (h == tail.last) && isPalindrome(tail.init)
           }
      }
 
