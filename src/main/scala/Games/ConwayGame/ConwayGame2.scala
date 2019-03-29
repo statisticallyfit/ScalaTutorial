@@ -22,16 +22,17 @@ object ConwayGame2 {
 			   } yield (nx, ny)
 	 }
 
-	 def candidateCells(cells: List[Cell]) = {
+	 def candidateCells(cells: ConwayState) = {
 		  cells.toSet.flatMap((cell: Cell) => neighbors(cell)) ++ cells
 	 }
+	 def isAlive(p:Cell, s:ConwayState):Boolean = s.contains(p)
 
-	 def neighborCount(cell: Cell, liveCells: List[Cell]) = {
-		  neighbors(cell).filter(c => liveCells.contains(c)).size
+	 def neighborCount(cell: Cell, state: ConwayState) = {
+		  neighbors(cell).filter(c => isAlive(c, state)).size
 	 }
 
-	 def augmentCell(cell: Cell, liveCells: List[Cell]) = {
-		  (cell, neighborCount(cell, liveCells), liveCells.contains(cell))
+	 def augmentCell(cell: Cell, state: ConwayState) = {
+		  (cell, neighborCount(cell, state), isAlive(cell, state))
 	 }
 
 	 def shouldLive(augmentedCell: (Cell, Int, Boolean)) = {
@@ -44,12 +45,31 @@ object ConwayGame2 {
 		  }
 	 }
 
-	 def evolve(cells: List[Cell]) = {
+	 def evolve(cells: ConwayState) = {
 		  val candidates = candidateCells(cells)
 		  val augmentedCandidates = candidates.map(c => augmentCell(c, cells))
 		  val newgeneration = augmentedCandidates.filter(c => shouldLive(c)).map{ac => ac._1}
-		  newgeneration.toList
+		  newgeneration
 	 }
+
+	 //Another way to calculate nextconwaystate
+
+	 /*def nextConwayState(state:ConwayState, maxSize:(Int, Int) = (20, 20)):ConwayState = {
+		  candidateCells(state).keySet //getting the positions
+			   .filter(cell => aliveNextTurn(cell, state)) //getting only the survivor cells
+			   .map(cell => (cell, true)) //converting to Set[(Position, Boolean)]
+			   .toMap
+	 }*/
+
+	//note: or with foldLeft
+
+	 /*val emptyMap: mutable.Map[Position, Boolean] = mutable.Map.empty
+
+	 // accumulating the cells into the mutable Map, then converting it into immutable Map.
+	 optionResults.foldLeft(emptyMap)((accMap, pos) => pos match {
+		  case Some(cell) => accMap + (cell -> true)
+		  case None => accMap
+	 }).toMap*/
 
 }
 
@@ -66,22 +86,22 @@ class ConwayGame2Tests extends FlatSpec {
 	 }
 
 	 it should "generate a list of all potential cells" in {
-		  val initialCells = List((1,1), (1,2))
-		  val expectedCells = List((0,0),(0,1),(0,2),(0,3),
+		  val initialCells = Set((1,1), (1,2))
+		  val expectedCells = Set((0,0),(0,1),(0,2),(0,3),
 			   (1,0),(1,1),(1,2),(1,3),
 			   (2,0),(2,1),(2,2), (2,3))
 		  assert(candidateCells(initialCells).toSet === expectedCells.toSet)
 	 }
 
 	 it should "count live neighbors" in {
-		  val liveCells = List((1,1), (1,2))
+		  val liveCells = Set((1,1), (1,2))
 		  assert(neighborCount((0,1), liveCells) === 2)
 		  assert(neighborCount((1,1), liveCells) === 1)
 		  assert(neighborCount((5,5), liveCells) === 0)
 	 }
 
 	 it should "augment cells with count and liveness" in {
-		  val liveCells = List((1,1), (1,2))
+		  val liveCells = Set((1,1), (1,2))
 		  assert(augmentCell((0,1), liveCells) === ((0,1),2,false))
 		  assert(augmentCell((1,1), liveCells) === ((1,1),1,true))
 		  assert(augmentCell((5,5), liveCells) === ((5,5),0,false))
@@ -108,19 +128,28 @@ class ConwayGame2Tests extends FlatSpec {
 	 }
 
 	 it should "maintain the block" in {
-		  val liveCells = List((1,1), (1,2), (2,1), (2,2))
-		  assert(evolve(liveCells).toSet === liveCells.toSet)
+		  val liveCells = Set((1,1), (1,2), (2,1), (2,2))
+		  assert(evolve(liveCells) === liveCells)
 	 }
 
 	 it should "blink the blinker" in {
-		  val liveCells = List((1,0), (1,1), (1,2))
-		  val expectedCells = List((0,1), (1,1), (2,1))
-		  assert(evolve(liveCells).toSet === expectedCells.toSet)
+		  val liveCells = Set((1,0), (1,1), (1,2))
+		  val expectedCells = Set((0,1), (1,1), (2,1))
+		  assert(evolve(liveCells) === expectedCells)
+
+		  //-------
+		  val blinker1:ConwayState = Map((2, 1) -> true, (2, 2) -> true, (2, 3) -> true).keySet
+		  val blinker2:ConwayState = Map((1, 2) -> true, (2, 2) -> true, (3, 2) -> true).keySet
+		  assert(evolve(blinker1) === blinker2)
+		  if(evolve(blinker1) === blinker2 && evolve(blinker2) === blinker1){
+			   println("YAY")
+		  }
+		  assert(evolve(blinker2) === blinker1)
 	 }
 
 	 it should "glide the glider" in {
-		  val liveCells = List((0,2),(1,0),(1,2),(2,1),(2,2))
-		  val expectedCells = List((0,2),(1,3),(2,1),(2,2),(2,3))
-		  assert(evolve(evolve(liveCells)).toSet === expectedCells.toSet)
+		  val liveCells = Set((0,2),(1,0),(1,2),(2,1),(2,2))
+		  val expectedCells = Set((0,2),(1,3),(2,1),(2,2),(2,3))
+		  assert(evolve(evolve(liveCells)) === expectedCells)
 	 }
 }

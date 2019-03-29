@@ -2,6 +2,7 @@ package Games.ConwayGame
 
 /**
   * Credit goes to: https://gist.github.com/lbialy/2a485cf6ae85c22ea4e70ebb360f2cb1
+  * Extra: coordinates legalizing size: https://rosettacode.org/wiki/Conway%27s_Game_of_Life/Scala
   */
 object ConwayGame1 {
 
@@ -68,7 +69,7 @@ object ConwayGame1 {
 			   // dead field with 3 living neighbours becomes live cell
 			   case x if isDead(cell, state) && x == 3 => Some(cell)
 		       // any live cell with 3 or 2 neighbors  lives on to next generation
-			   case x if state.contains(cell) && x == 2 || x == 3 => Some(cell)
+			   case x if isAlive(cell, state) && x == 2 || x == 3 => Some(cell)
 			   case _ => None
 		  }
 	 }
@@ -76,7 +77,7 @@ object ConwayGame1 {
 	 def countNeighbors(pos: Cell, state: ConwayState): Int = (neighborCells(pos) - pos).intersect(state).size
 	 //TODO or just use candidateCells.size?
 
-	 def candidateCells(state: ConwayState): ConwayState = state flatMap neighborCells
+	 def candidateCells(state: ConwayState): ConwayState = (state flatMap neighborCells) ++ state
 
 	 //commpare with phelps
 	 /*def candidateCells(cells: List[Cell]) = {
@@ -103,7 +104,8 @@ object ConwayGame1 {
 		  val blinker1:ConwayState = Set((2, 1), (2,2), (2,3))
 		  val blinker2:ConwayState = Set((1,2), (2,2), (3,2))
 
-		  
+		  println(nextGeneration(blinker1))
+
 	 }
 
 	 /*def draw(state: ConwayState) = {
