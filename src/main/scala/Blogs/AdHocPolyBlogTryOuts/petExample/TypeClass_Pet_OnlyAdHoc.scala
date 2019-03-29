@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts.petExample
+package Blogs.AdHocPolyBlogTryOuts.petExample
 
 import java.awt.Color
 

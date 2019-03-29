@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts
+package Blogs.AdHocPolyBlogTryOuts
 
 /**
   *

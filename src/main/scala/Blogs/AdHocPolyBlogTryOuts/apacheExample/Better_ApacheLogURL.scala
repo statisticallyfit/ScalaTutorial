@@ -1,10 +1,13 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts.apacheExample
+package Blogs.AdHocPolyBlogTryOuts.apacheExample
+
 
 //note source: https://tylersommer.com/ad-hoc-polymorphism-in-scala
 
+/**
+  *
+  */
+object Better_ApacheLogURL {
 
-
-object Basic_ApacheLogURL {
 
 
      //Given two unrelated types, perhaps representing Apache log data:
@@ -21,6 +24,26 @@ object Basic_ApacheLogURL {
      }
 
 
+     // A Relation represents the relation between two types, how to convert
+     trait Relation[T, R] {
+          def convert(t: Seq[T]): Seq[R]
+     }
+     object Relation {
+          // Now define the relation between ApacheLog and URLCounts.
+          implicit object Logs2Counts extends Relation[ApacheLog, URLCounts] {
+               def convert(t: Seq[ApacheLog]): Seq[URLCounts] = URLCounts.fromLogs(t)
+          }
+     }
+
+
+
+     // A Converter is a generic converter that can convert sequences of one type to another.
+     class Converter[T, R](implicit relation: Relation[T, R]) {
+          def convert(seq: Seq[T]): Seq[R] = relation.convert(seq)
+     }
+
+
+
      def main (args: Array[String] ) {
           val input = Seq(
                ApacheLog("2017-02-08 19:45:22", "http://localhost/some-url"),
@@ -28,6 +51,7 @@ object Basic_ApacheLogURL {
                ApacheLog("2017-02-08 19:46:53", "http://localhost/some-url"),
                ApacheLog("2017-02-08 19:46:57", "http://localhost/some-other-url"))
 
-          URLCounts.fromLogs(input).foreach(c => println(s"${c.url}: ${c.count}"))
+          val converter = new Converter[ApacheLog, URLCounts]
+          converter.convert(input).foreach(c => println(s"${c.url}: ${c.count}"))
      }
 }

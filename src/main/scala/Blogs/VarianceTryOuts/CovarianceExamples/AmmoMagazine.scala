@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.VarianceTryOuts.CovarianceExamples
+package Blogs.VarianceTryOuts.CovarianceExamples
 
 
 //note

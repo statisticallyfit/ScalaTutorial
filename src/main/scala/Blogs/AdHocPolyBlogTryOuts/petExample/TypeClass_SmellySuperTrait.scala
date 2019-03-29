@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts.petExample
+package Blogs.AdHocPolyBlogTryOuts.petExample
 
 /**
   * NOTE: this approach is smelly because:

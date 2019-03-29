@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts.apacheExample
+package Blogs.AdHocPolyBlogTryOuts.apacheExample
 
 
 

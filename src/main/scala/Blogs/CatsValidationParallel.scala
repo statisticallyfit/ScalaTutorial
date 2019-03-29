@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs
+package Blogs
 
 import cats.Semigroup
 import cats.SemigroupK

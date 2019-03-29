@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts
+package Blogs.AdHocPolyBlogTryOuts
 
 // note SOURCE: http://blog.jaceklaskowski.pl/2015/05/15/ad-hoc-polymorphism-in-scala-with-type-classes.html
 

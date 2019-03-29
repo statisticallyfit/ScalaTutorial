@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.AdHocPolyBlogTryOuts
+package Blogs.AdHocPolyBlogTryOuts
 
 // note: Source: https://medium.com/@sinisalouc/ad-hoc-polymorphism-and-type-classes-442ae22e5342
 

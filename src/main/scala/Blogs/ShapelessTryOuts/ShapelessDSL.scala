@@ -1,4 +1,4 @@
-package TypeclassesFromBlogs.ShapelessTryOuts
+package Blogs.ShapelessTryOuts
 
 import shapeless.{ ::, Generic, HList, HNil, Lazy}
 
