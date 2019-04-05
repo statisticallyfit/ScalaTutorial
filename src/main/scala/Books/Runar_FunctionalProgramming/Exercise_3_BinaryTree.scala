@@ -344,5 +344,9 @@ object Exercise_3_BinaryTree {
 		assert(foldRPre(0)((x: Int, y: Int) => x - y)(t) == -4, "Test 25")
 
 		assert(fold(0)((x: Int, y: Int, z: Int) => x - y - z)(t) == -2, "Test 26")*/
+
+		//TODO where to fix the tree
+		//https://github.com/robertberry/Functional-Programming-in-Scala-Exercises/blob/master/src/main/scala/com/github/robertberry/fpis/Chapter3.scala
+		//todo https://github.com/etorreborre/fpinscala-exercises/blob/master/src/main/scala/fpinscala/datastructures/Tree.scala
 	}
 }

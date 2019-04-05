@@ -1,9 +1,12 @@
+/*
 package Blogs.ShapelessTryOuts
 
 import shapeless.{ ::, Generic, HList, HNil, Lazy}
 
 /**
   * source: https://www.beyondthelines.net/programming/reducing-type-class-boilerplate-with-shapeless/
+  * source original typeclass: https://gist.github.com/btlines/c5b894197ca015e8ecf3e858c66b1f74
+  * source shapeless: https://gist.github.com/btlines/bcee65f5614fb73750e04c405e06497c
   */
 
 trait Amount[A]{
@@ -126,11 +129,17 @@ object ShapelessDSL extends App {
      println(twentyPounds)
      println("Thirty: " + GBP(15).plus(GBP(15)))
 
-     val twentyPoundsPerMonth = twentyPounds per Month
-     val fortyPoundsPerMonth  = twentyPoundsPerMonth + twentyPoundsPerMonth
-     val pricePerSquareMeter  = EUR(1000) per SquareMeter
+     val twentyPoundsPerMonth: Per[GBP, Month] = twentyPounds per Month
+     val fortyPoundsPerMonth = twentyPoundsPerMonth + twentyPoundsPerMonth
+
+
+     val pricePerSquareMeter: Per[EUR, SquareMeter] = EUR(1000) per SquareMeter
      val expensiveSquareMeter = pricePerSquareMeter + pricePerSquareMeter
-     val rentingPotential     = USD(1800) per SquareMeter per Year
-     val estimatedCost        = USD(1500) per SquareMeter per Year
+
+
+     val rentingPotential: Per[Per[USD, SquareMeter], Year] = USD(1800) per SquareMeter per Year
+     val estimatedCost: Per[Per[USD, SquareMeter], Year]    = USD(1500) per SquareMeter per Year
      val estimatedRevenue     = rentingPotential - estimatedCost
-}
+
+}*/
+//TODO fix this once fix the typeclass file version.

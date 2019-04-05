@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142bb682-a531-4b53-9032-4cc779eb6b92" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_10_FoldsRewrite.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_16_AddOneViaFold.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_18_MapViaFold.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_19_FilterViaFold.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_20_FlatMapViaFold.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_21_FilterViaFlatMap.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_24_HasSubsequence.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_9_LengthViaFold.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyTypeclass.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_15_ConcatViaFold.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_15_FlattenViaFold.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/FoldRewriteLecture.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_Appendable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_Appendable.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/ShapelessDSL.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyShapelessDSL.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Blogs/VarianceTryOuts/CovarianceExamples/AmmoMagazine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Blogs/VarianceTryOuts/CovarianceExamples/AmmoMagazine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -51,21 +45,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_24_HasSubsequence.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/VarianceTryOuts/CovarianceExamples/AmmoMagazine.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+            <state relative-caret-position="111">
+              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyShapelessDSL.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="315" column="10" selection-start-line="315" selection-start-column="10" selection-end-line="315" selection-end-column="10" />
+            <state relative-caret-position="461">
+              <caret line="144" column="52" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
               <folding>
-                <element signature="e#4768#4801#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyTypeclass.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="182" column="57" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,6 +96,7 @@
       <find>fmap</find>
       <find>mapviafold</find>
       <find>val t</find>
+      <find>pretty</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,11 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/OnlineExercises/ElementHasDuplicates.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/OnlineExercises/SimpleParser.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/OnlineExercises/HackerRank/_Gemstones.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/OnlineExercises/SubstringSearching.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/1_last.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/Exercise1_LastElement.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/Ex2_Penultimate.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/Ex2_NthLastRecursive.scala" />
@@ -149,6 +151,11 @@
         <option value="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_15_FlattenViaFold.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_24_HasSubsequence.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_Appendable.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Blogs/VarianceTryOuts/CovarianceExamples/AmmoMagazine.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/ShapelessDSL.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyTypeclass.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyShapelessDSL.scala" />
       </list>
     </option>
   </component>
@@ -160,7 +167,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="73" />
-    <option name="y" value="25" />
+    <option name="y" value="27" />
     <option name="width" value="1240" />
     <option name="height" value="759" />
   </component>
@@ -171,6 +178,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,7 +210,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="Books" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScalaTutorial" type="b2602c69:ProjectViewProjectNode" />
@@ -210,8 +218,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="Books" type="462c0819:PsiDirectoryNode" />
-              <item name="Runar_FunctionalProgramming" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="AdHocPolyBlogTryOuts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScalaTutorial" type="b2602c69:ProjectViewProjectNode" />
@@ -219,7 +227,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="Exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="AdHocPolyBlogTryOuts" type="462c0819:PsiDirectoryNode" />
+              <item name="apacheExample" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScalaTutorial" type="b2602c69:ProjectViewProjectNode" />
@@ -227,15 +237,43 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="Exercises" type="462c0819:PsiDirectoryNode" />
-              <item name="ScalaNinetyNineExercises" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="AdHocPolyBlogTryOuts" type="462c0819:PsiDirectoryNode" />
+              <item name="petExample" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaTutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaTutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="ShapelessTryOuts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaTutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaTutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="VarianceTryOuts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaTutorial" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaTutorial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="Blogs" type="462c0819:PsiDirectoryNode" />
+              <item name="VarianceTryOuts" type="462c0819:PsiDirectoryNode" />
+              <item name="CovarianceExamples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,8 +285,8 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554056891502" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ScalaUNE/Tutorial1_FirstSteps/firststeps" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554489427887" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.lastSelected" value="configurable.group.appearance" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -270,7 +308,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exercise_3_BinaryTree">
+  <component name="RunManager" selected="Scala Console.Scala Console">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -611,34 +649,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_3_20_FlatMapViaFold" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Books.Runar_FunctionalProgramming.Exercise_3_20_FlatMapViaFold" />
-      <module name="scalatutorial" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Books.Runar_FunctionalProgramming.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Exercise_3_21_FilterViaFlatMap" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Books.Runar_FunctionalProgramming.Exercise_3_21_FilterViaFlatMap" />
-      <module name="scalatutorial" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Books.Runar_FunctionalProgramming.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Exercise_3_24_HasSubsequence" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Books.Runar_FunctionalProgramming.Exercise_3_24_HasSubsequence" />
       <module name="scalatutorial" />
@@ -657,6 +667,31 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Books.Runar_FunctionalProgramming.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GunRunner" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Blogs.VarianceTryOuts.CovarianceExamples.GunRunner" />
+      <module name="scalatutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Blogs.VarianceTryOuts.CovarianceExamples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2" />
+    </configuration>
+    <configuration name="TypeClass_KitchenWeapon" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Blogs.AdHocPolyBlogTryOuts.TypeClass_KitchenWeapon" />
+      <module name="scalatutorial" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Blogs.AdHocPolyBlogTryOuts.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -749,19 +784,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Exercise_3_20_FlatMapViaFold" />
-      <item itemvalue="Application.Exercise_3_21_FilterViaFlatMap" />
       <item itemvalue="Application.Exercise_3_24_HasSubsequence" />
-      <item itemvalue="Scala Console.Scala Console" />
       <item itemvalue="Application.Exercise_3_BinaryTree" />
+      <item itemvalue="Application.GunRunner" />
+      <item itemvalue="Scala Console.Scala Console" />
+      <item itemvalue="Application.TypeClass_KitchenWeapon" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Exercise_3_BinaryTree" />
         <item itemvalue="Scala Console.Scala Console" />
+        <item itemvalue="Application.GunRunner" />
+        <item itemvalue="Application.TypeClass_KitchenWeapon" />
+        <item itemvalue="Application.Exercise_3_BinaryTree" />
         <item itemvalue="Application.Exercise_3_24_HasSubsequence" />
-        <item itemvalue="Application.Exercise_3_21_FilterViaFlatMap" />
-        <item itemvalue="Application.Exercise_3_20_FlatMapViaFold" />
       </list>
     </recent_temporary>
   </component>
@@ -849,10 +884,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="25" width="1240" height="759" extended-state="0" />
-    <editor active="true" />
+    <frame x="73" y="27" width="1240" height="759" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22902684" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2785235" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -862,7 +896,7 @@
       <window_info id="Nl-Palette" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37958533" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37958533" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -920,86 +954,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/GearsOfWar.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="e#25#68#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/1_last.scala" />
-    <entry file="jar://$PROJECT_DIR$/project/.ivy/cache/org.scalactic/scalactic_2.11/srcs/scalactic_2.11-3.0.3-sources.jar!/org/scalactic/TripleEqualsSupport.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/ScalaNinetyNineExercises/Ex1_LastElementRecursive.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/project/.ivy/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.12-sources.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/Ex2_Penultimate.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/ScalaNinetyNineExercises/Ex2_PenultimateRecursive.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/ScalaNinetyNineExercises/Ex2_NthLastRecursive.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/ScalaNinetyNineExercises/Ex3_NthElementRecursion.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/ExercisesOnline/ScalaNinetyNineExercises/Ex5_ReverseListRecursive.scala" />
-    <entry file="jar://$PROJECT_DIR$/project/.ivy/cache/org.scalactic/scalactic_2.11/srcs/scalactic_2.11-3.0.3-sources.jar!/org/scalactic/TripleEquals.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="127" column="75" selection-start-line="127" selection-start-column="75" selection-end-line="127" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/ScalaNinetyNineExercises/Ex4_LengthRecursive.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Exercises/ScalaNinetyNineExercises/Ex6_IsPalindrome.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1144,13 +1098,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/FoldRewriteLecture.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/FoldRewriteLecture.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_10_FoldsRewrite.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1210,19 +1158,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_24_HasSubsequence.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        <state relative-caret-position="413">
+          <caret line="349" column="130" selection-start-line="349" selection-start-column="130" selection-end-line="349" selection-end-column="130" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_BinaryTree.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Books/Runar_FunctionalProgramming/Exercise_3_24_HasSubsequence.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="315" column="10" selection-start-line="315" selection-start-column="10" selection-end-line="315" selection-end-column="10" />
+        <state relative-caret-position="368">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/VarianceTryOuts/CovarianceExamples/VendingMachine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1488">
           <folding>
-            <element signature="e#4768#4801#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_KitchenWeapon.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="963">
+          <caret line="107" column="20" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_GeneralWeapons.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_Address.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-256">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/Implicit_Expression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/Implicit_Appendable.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-320">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_Appendable.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/TypeClass_Expression.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/apacheExample/Best_ApacheLogURL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/apacheExample/Basic_ApacheLogURL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/AdHocPolyBlogTryOuts/FinanceDSL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/VarianceTryOuts/CovarianceExamples/AmmoMagazine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyTypeclass.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="182" column="57" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Blogs/ShapelessTryOuts/CurrencyShapelessDSL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="144" column="52" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

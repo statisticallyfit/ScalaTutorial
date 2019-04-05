@@ -29,9 +29,12 @@ object AmmoMagazine {
   * note conclusion: mutating state inside covariant class AmmoMagazine works because the state is made private.
   */
 
+//note: no real need for the A <: Bullet, just there to specify this class is for Bullets.
 /*final*/ class AmmoMagazine[+A <: Bullet](private[this] var bullets: List[A]) {
 
      def hasBullets: Boolean = bullets.nonEmpty
+
+     //def set(a: A): Unit = {bullets(0) = a}
 
      def giveNextBullet(): Option[A] ={
           bullets match {
@@ -43,6 +46,10 @@ object AmmoMagazine {
           }
      }
 
+     //note: no setters allowed for covariance
+     // note:
+     // covariance: just getters, no setters
+     // contravariance: just setters, no getters
      //def addSingleBullet[B >: A](b: A): Unit = bullets = bullets :+ b
 
      override def toString = s"AmmoMagazine(${bullets.mkString(", ")})"
@@ -65,6 +72,7 @@ object AmmoMagazine {
 
 
 object GunRunner extends App {
+     //note: covariance allows to assign AmmoMag[Bullet] <= AmmoMag[NormalBullet]
      val gun = new Gun(AmmoMagazine.newNormalBulletsMag)
      println(gun.hasAmmo)
      println(gun)

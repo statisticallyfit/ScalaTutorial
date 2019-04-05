@@ -39,7 +39,6 @@ object TypeClass_Appendable {
 
      def main (args: Array[String] ) {
 
-
           assert(AppendFactory.appendItems_WithImplicitParam(2, 3) == 5)
           assert(AppendFactory.appendItems_WithImplicitParam("2", "3") == "23")
 
